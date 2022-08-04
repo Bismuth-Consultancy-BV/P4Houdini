@@ -1,0 +1,15 @@
+{
+    "P4_Enabled": true,
+    "P4Client_Root": "D:/Local_P4V_Depot/",
+    "P4_AutoConnect": true,
+    "P4_License": "$HOUDINI_USER_PREF_DIR/p4houdini.license",
+    "P4CL_Default": "Houdini Generated CL",
+    "P4CL_Icons": true,
+    "P4CL_Remove_Empty": false,
+    "P4Updates": {
+        "HIP_Add_On_Save": true,
+        "HIP_Checkout_On_Save": true,
+        "HIP_Update_Before_Load": true,
+        "HDA_Checkout_On_Save": true
+    }
+}

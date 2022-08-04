@@ -1,0 +1,33 @@
+{
+    "nodes": {
+
+        "file" : {
+            "file":{"filemode": 2}
+        },
+
+        "filecache" : {
+            "file": true
+        },
+
+        "rop_alembic": {
+            "filename": true
+        },
+
+        "kinefx::rop_fbxanimoutput": {
+            "outputfilepath": true
+        },
+
+        "kinefx::rop_fbxcharacteroutput": {
+            "outputfilepath": true
+        },
+
+        "rop_geometry": {
+            "sopoutput": true
+        },
+
+        "rop_gltf": {
+            "file": true
+        }
+
+    }
+}
