@@ -9,7 +9,7 @@ You can join the Discord to chat about the plugin: https://discord.gg/rKr5SNZJtM
 
 By using the plugin or any of its contents, you are agreeing to the EULA and Terms of Service.
 
-Please note that the plugin is currently in beta.
+Please note that the plugin is currently in beta, and only supports Houdini 19.0 on Windows and Linux.
 
 ## Aquiring a License
 If you are an individual and want a node-locked license, you can simply purchase a license on Gumroad here: https://ambrosiussen.gumroad.com/l/p4houdini
