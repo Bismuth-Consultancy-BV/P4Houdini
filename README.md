@@ -6,9 +6,10 @@ Perforce Plugin for Houdini developed by AMTA Holding BV, Paul Ambrosiussen.
 [![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/paulambrosiussen/)
 
 You can join the Discord to chat about the plugin: https://discord.gg/rKr5SNZJtM
+
 By using the plugin or any of its contents, you are agreeing to the EULA and Terms of Service.
 
-Please note that the plugin is currently offered to the beta-testers only, and not meant for re-distribution to others. (Except for others within your studio) The intention is to offer this plugin as a paid solution to a wider audience in the future.
+Please note that the plugin is currently in beta.
 
 ## Aquiring a License
 If you are an individual and want a node-locked license, you can simply purchase a license on Gumroad here: https://ambrosiussen.gumroad.com/l/p4houdini
