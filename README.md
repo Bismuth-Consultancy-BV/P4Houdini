@@ -1,4 +1,5 @@
 # P4Houdini
+![P4Houdini Banner](https://github.com/AMTA-Consultancy/P4Houdini/blob/main/misc/images/P4Houdini_Plugin.jpg)
 Perforce Plugin for Houdini developed by AMTA Holding BV, Paul Ambrosiussen.
 
 [![](https://img.shields.io/badge/twitter-%230077B5.svg?style=for-the-badge&logo=twitter)](https://twitter.com/ambrosiussen_p)
@@ -81,6 +82,9 @@ More detailed overview: https://www.ambrosiussen.com/p4houdini
 
 
 **Enable the P4Houdini shelf!**
+
+![P4Houdini Shelf](https://github.com/AMTA-Consultancy/P4Houdini/blob/main/misc/images/P4Houdini_Shelf.jpg)
+
 Click the `Set Depot` shelf tool to switch the plugin to your Perforce repository root.
 
 The plugin root has a file called `P4Preferences.json`, which contains some settings you can configure.
