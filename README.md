@@ -2,6 +2,7 @@
 Perforce Plugin for Houdini developed by Paul Ambrosiussen.
 
 You can join the Discord to chat about the plugin: https://discord.gg/rKr5SNZJtM
+By using the plugin or any of its contents, you are agreeing to the EULA and Terms of Service.
 
 Please note that the plugin is currently offered to the beta-testers only, and not meant for re-distribution to others. (Except for others within your studio) The intention is to offer this plugin as a paid solution to a wider audience in the future.
 
@@ -15,10 +16,10 @@ For more information on filetypes, see: https://www.perforce.com/manuals/p4sag/C
 To install the plugin for the first time, follow these steps:
 1. Clone this repository and make note of the directory you have cloned it to.
 2. Copy the `P4Houdini.json` file found in the repository root, and paste it in the $HOUDINI_USER_PREF_DIR/packages/ folder.
-3. Edit the `P4Houdini.json` file you just pasted, and modify the path found inside. Set the path to where you cloned the repository to in step one.
-4. Launch Houdini and open the `P4Houdini` shelf. Click the `Install P4` shelf button. Restart Houdini once complete.
+3. Edit the `P4Houdini.json` file you just pasted, and modify the `$P4HOUDINI` path found inside. Set the path to where you cloned the repository to in step one.
+4. Launch Houdini and open the `P4Houdini` shelf. Click the `Install P4` shelf button. Restart Houdini once complete. If you are experiencing any issues in this step please see the troubleshooting section.
 5. Set the depot by pressing the `Set Depot` shelf button. Browse to the root folder of your repo and hit accept. Additionally you can also manually set the path in the `P4Preferences.json` file. The variable to set is `P4Client_Root`.
-6. Press the Activate License shelf tool and enter your license key to generate a p4houdini.license file.
+6. Press the Activate License shelf tool and enter your license key (Site or Gumroad) to generate a p4houdini.license file.
 
 ## Configuring a P4 Repository
 The plugin makes use of P4TICKETS. This means that it wil make use of already validated and authenticated sessions from the Perforce Visual Client. These tickets are valid by default for 12 hours. If the plugin has authentication issues, try logging in on P4V again. 
@@ -26,6 +27,7 @@ If you want to connect to a different depot / server using the plugin, you can c
 1. Create a `p4config.txt` in your repository root, or 2. Create a `.p4config` file.
 The `p4config.txt` should contain the following data. Notice the [ ] sections. You should replace them with your data:
 
+Remote Server:
 ```
 P4IGNORE=p4ignore.txt
 P4INITROOT=$configdir
@@ -33,10 +35,28 @@ P4PORT=[YOUR PERFORCE SERVER. EXAMPLE: ssl:perforce:1666]
 P4CLIENT=[YOUR WORKSPACE NAME]
 ```
 
+Local / Personal Server: (Windows)
+```
+P4IGNORE=p4ignore.txt
+P4INITROOT=$configdir
+P4PORT=rsh:DVCS/p4d.exe -i -J off -r "$configdir\.p4root"
+P4CLIENT=[YOUR WORKSPACE NAME]
+```
+
+Local / Personal Server: (Linux)
+```
+P4IGNORE=p4ignore.txt
+P4INITROOT=$configdir
+P4PORT=rsh:/bin/sh -c "umask 077 && exec [~/Downloads/p4v-2022.2.2304646/lib/P4VResources/DVCS/p4d] -i -J off -r '"$configdir/.p4root'"
+P4CLIENT=[YOUR WORKSPACE NAME]
+```
+
+
 It might be that for your specific perforce configuration you need different / additional settings. You can read about those here: https://www.perforce.com/manuals/cmdref/Content/CmdRef/P4CONFIG.html
 
 ## Using the Plugin
-The plugin currently has the following features: Please send me requests :)
+More detailed overview: https://www.ambrosiussen.com/p4houdini
+
 - (Automatic) checking out and adding of hip files. (Triggers when saving a file)
 - (Automatic) checking out and adding of hda files. (RMB menu when clicking on HDA)
 - Submitting (partial) changelists from inside Houdini. (See shelf tool)
@@ -50,6 +70,7 @@ The plugin currently has the following features: Please send me requests :)
 - Make files writeable by RMB clicking items in the dialog that shows up when saving / adding one or multiple files.
 - You can also automatically add files on ROPs using post-render scripts. 
   Check out the `examples/manual_managing_files.hip` for an example. You will see that the pre-frame and post-write parms have python expression in it which will ensure all files get checked out pre-write, or get added to the changelist after creation.
+
 
 **Enable the P4Houdini shelf!**
 Click the `Set Depot` shelf tool to switch the plugin to your Perforce repository root.
@@ -65,10 +86,6 @@ More features are being developed based on user requests. Please send me an emai
 
 ## Troubleshooting
 If you have an issue, either send me an email at paul@ambrosiussen.com, or open an issue here on Github.
-
-- On Linux when using a personal server, using the following for P4PORT works for me: (Make sure to change the path tp p4d to match your environment.
-
-```P4PORT=rsh:/bin/sh -c "umask 077 && exec ~/Downloads/p4v-2022.2.2304646/lib/P4VResources/DVCS/p4d -i -J off -r '"$configdir/.p4root'"```
 
 ## Privacy Statement
 The plugin locally validates itself against information from sesictrl, as well as some host machine information. For non-site licenses, the plugin also validates the license periodically through the Gumroad API. In no cases does the plugin ever submit any of the aforementioned information to any online server. All information is kept locally in the generated encrypted license file. 
