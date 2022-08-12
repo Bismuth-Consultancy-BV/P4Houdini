@@ -66,6 +66,10 @@ More features are being developed based on user requests. Please send me an emai
 ## Troubleshooting
 If you have an issue, either send me an email at paul@ambrosiussen.com, or open an issue here on Github.
 
+- On Linux when using a personal server, using the following for P4PORT works for me: (Make sure to change the path tp p4d to match your environment.
+
+```P4PORT=rsh:/bin/sh -c "umask 077 && exec ~/Downloads/p4v-2022.2.2304646/lib/P4VResources/DVCS/p4d -i -J off -r '"$configdir/.p4root'"```
+
 ## Privacy Statement
 The plugin locally validates itself against information from sesictrl, as well as some host machine information. For non-site licenses, the plugin also validates the license periodically through the Gumroad API. In no cases does the plugin ever submit any of the aforementioned information to any online server. All information is kept locally in the generated encrypted license file. 
 
