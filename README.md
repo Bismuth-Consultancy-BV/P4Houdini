@@ -1,5 +1,8 @@
 # P4Houdini
-Perforce Plugin for Houdini developed by Paul Ambrosiussen.
+Perforce Plugin for Houdini developed by AMTA Holding BV, Paul Ambrosiussen.
+
+- Twitter: https://twitter.com/ambrosiussen_p
+- LinkedIn: https://www.linkedin.com/in/paulambrosiussen/
 
 You can join the Discord to chat about the plugin: https://discord.gg/rKr5SNZJtM
 By using the plugin or any of its contents, you are agreeing to the EULA and Terms of Service.
