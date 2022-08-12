@@ -9,6 +9,11 @@ By using the plugin or any of its contents, you are agreeing to the EULA and Ter
 
 Please note that the plugin is currently offered to the beta-testers only, and not meant for re-distribution to others. (Except for others within your studio) The intention is to offer this plugin as a paid solution to a wider audience in the future.
 
+## Aquiring a License
+If you are an individual and want a node-locked license, you can simply purchase a license on Gumroad here: https://ambrosiussen.gumroad.com/l/p4houdini
+
+If you are a studio and want access on multiple machines, please contact me at paul@ambrosiussen.com
+
 ## Important information about Houdini & Perforce!
 Please make sure your hip and hda files that get submitted to perforce are marked as binary files and not text files!!
 Hip and HDAs not marked as binary will not properly version on perforce, and will corrupt your files. (This has nothing to do with the plugin)
