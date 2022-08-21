@@ -9,6 +9,26 @@ from hutil.Qt import QtCore, QtGui, QtWidgets
 PLUGIN_NAME = "P4Houdini"
 
 
+def P4Prompt(message):
+    messagebox = QtWidgets.QMessageBox()
+    messagebox.setIconPixmap(QtGui.QPixmap(hou.text.expandString("$P4HOUDINI/help/icons/perforce-icon.svg")))
+    messagebox.setText(message)
+    messagebox.setWindowTitle(PLUGIN_NAME)
+    messagebox.setStandardButtons(QtWidgets.QMessageBox.Ok | QtWidgets.QMessageBox.Cancel)
+
+    value = messagebox.exec()
+    if value == QtWidgets.QMessageBox.Ok:
+        return True
+    return False
+
+def P4Message(message):
+    messagebox = QtWidgets.QMessageBox()
+    messagebox.setIconPixmap(QtGui.QPixmap(hou.text.expandString("$P4HOUDINI/help/icons/perforce-icon.svg")))
+    messagebox.setText(message)
+    messagebox.setWindowTitle(PLUGIN_NAME)
+    messagebox.setStandardButtons(QtWidgets.QMessageBox.Ok)
+    messagebox.exec()
+
 class P4HoudiniChangeListChooser(QtWidgets.QDialog):
     """
     UI for letting user pick the changelist they wish to use.
