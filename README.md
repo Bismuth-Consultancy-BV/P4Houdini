@@ -100,6 +100,11 @@ More features are being developed based on user requests. Please send me an emai
 ## Troubleshooting
 If you have an issue, either send me an email at paul@ambrosiussen.com, or open an issue here on Github.
 
+Linux:
+- If the shelf installer has issues, try installing the `curl` module using for example `sudo apt install curl`. Then restart Houdini and try again.
+If that fails, manually pip install the `p4python`and `netifaces` modules yourself.
+
+
 ## Privacy Statement
 The plugin locally validates itself against information from sesictrl, as well as some host machine information. For non-site licenses, the plugin also validates the license periodically through the Gumroad API. In no cases does the plugin ever submit any of the aforementioned information to any online server. All information is kept locally in the generated encrypted license file. 
 
