@@ -7,7 +7,7 @@ Perforce Plugin for Houdini developed by AMTA Holding BV, Paul Ambrosiussen.
 
 You can join the Discord to chat about the plugin: https://discord.gg/rKr5SNZJtM
 
-By using the plugin or any of its contents, you are agreeing to the EULA and Terms of Service.
+By downloading or using the plugin (or any of its contents), you are agreeing to the EULA and Terms of Service.
 
 Please note that the plugin is currently in beta, and only supports Houdini 19.0 on Windows and Linux.
 
@@ -109,7 +109,7 @@ If that fails, manually pip install the `p4python`and `netifaces` modules yourse
 The plugin locally validates itself against information from sesictrl, as well as some host machine information. For non-site licenses, the plugin also validates the license periodically through the Gumroad API. In no cases does the plugin ever submit any of the aforementioned information to any online server. All information is kept locally in the generated encrypted license file. 
 
 ## DISCLAIMERS
-Perforce and the API used by the plugin is owned and developed by Perforce Software, Inc. https://www.perforce.com/
+Perforce, their API and any of their icons used by the plugin is owned and developed by Perforce Software, Inc. https://www.perforce.com/
 
 Houdini is owned and developed by SideFX. https://www.sidefx.com/
 
