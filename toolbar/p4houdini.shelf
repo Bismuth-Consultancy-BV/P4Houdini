@@ -48,16 +48,24 @@ if not os.path.isdir(FOLDER):
     os.makedirs(FOLDER)
     
     
-subprocess.call(f"curl https://bootstrap.pypa.io/get-pip.py -o {PIPINSTALLFILE}")
+p = subprocess.Popen(["curl", "-o", PIPINSTALLFILE, "https://bootstrap.pypa.io/get-pip.py"])
+p.communicate()
 
 # Installing pip to Houdini
-subprocess.call(f"hython {PIPINSTALLFILE}")
+p = subprocess.Popen(["hython", PIPINSTALLFILE])
+p.communicate()
+
+# Installing / Upgrading setuptools because on py3.9 the netifaces module needs to be rebuilt
+p = subprocess.Popen(["hython", "-m", "pip", "install", "--upgrade", PIP_FOLDER, "setuptools"])
+p.communicate()
 
 # Installing p4python module using pip
-subprocess.call(f"hython -m pip install --target {PIP_FOLDER} p4python netifaces")
+p = subprocess.Popen(["hython", "-m", "pip", "install", "--target", PIP_FOLDER, "p4python", "netifaces"])
+p.communicate()
 
 # Informing user about the change
-hou.ui.displayMessage("You have now installed the required dependencies for this build of Houdini.\nPlease restart Houdini for it to take effect", buttons=('OK',), severity=hou.severityType.Message, title="P4Houdini Plugin")]]></script>
+hou.ui.displayMessage("You have now installed the required dependencies for this build of Houdini.\nPlease restart Houdini for it to take effect", buttons=('OK',), severity=hou.severityType.Message, title="P4Houdini Plugin")
+]]></script>
   </tool>
 
   <tool name="p4houdini_set_depot" label="Set Depot" icon="$P4HOUDINI/help/icons/set_depot.svg">
