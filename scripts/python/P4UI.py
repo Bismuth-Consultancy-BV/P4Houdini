@@ -2,6 +2,7 @@
 This is UI code only.
 """
 
+import re
 import hou
 from hutil.Qt import QtCore, QtGui, QtWidgets
 
@@ -28,6 +29,24 @@ def P4Message(message):
     messagebox.setWindowTitle(PLUGIN_NAME)
     messagebox.setStandardButtons(QtWidgets.QMessageBox.Ok)
     messagebox.exec()
+
+
+def atoi(text):
+    return int(text) if text.isdigit() else text
+
+def natural_keys(text):
+    '''
+    alist.sort(key=natural_keys) sorts in human order
+    http://nedbatchelder.com/blog/200712/human_sorting.html
+    '''
+    return [ atoi(c) for c in re.split(r'(\d+)', text) ]
+
+def natural_keys_2nd_element(text):
+    '''
+    alist.sort(key=natural_keys) sorts in human order
+    http://nedbatchelder.com/blog/200712/human_sorting.html
+    '''
+    return [ atoi(c) for c in re.split(r'(\d+)', text[1]) ]
 
 class P4HoudiniChangeListChooser(QtWidgets.QDialog):
     """
@@ -146,7 +165,6 @@ class P4HoudiniChangeListChooser(QtWidgets.QDialog):
 
     def update_file_dropdown(self):
         self.listwidget.clear()
-        #self.plugin.find_changelist_by_description(self.selected_changelist)
         if isinstance(self.selected_changelist, int):
             changelist = self.selected_changelist
         else:
@@ -156,6 +174,8 @@ class P4HoudiniChangeListChooser(QtWidgets.QDialog):
             return
 
         modifications = self.plugin.get_files_in_changelist(changelist)
+        modifications.sort(key=natural_keys_2nd_element)
+
 
         for action, file, _ in modifications:
             item = QtWidgets.QListWidgetItem()
@@ -222,6 +242,8 @@ class P4HoudiniChangeListChooser(QtWidgets.QDialog):
 
     def populate_files_to_add_listview(self):
         self.addwidget.clear()
+
+        self.proposed_files_to_add.sort(key=natural_keys)
 
         for file in self.proposed_files_to_add:
             item = QtWidgets.QListWidgetItem()
