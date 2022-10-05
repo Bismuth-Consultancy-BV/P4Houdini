@@ -141,7 +141,7 @@ class P4HoudiniChangeListChooser(QtWidgets.QDialog):
                 value = change["change"].strip()
                 added_id.append(int(value))
                 _desc = change["desc"].strip().split("\n")[0]
-                value += " - " + _desc[:30]
+                value += " - " + _desc#[:30]
                 added.append(value)
 
         self.available_cl = added
