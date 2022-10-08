@@ -1,13 +1,13 @@
 # P4Houdini
 ![P4Houdini Banner](https://github.com/AMTA-Consultancy/P4Houdini/blob/main/misc/images/P4Houdini_Plugin.jpg)
-Perforce Plugin for Houdini developed by Bismuth Consultancy BV, Paul Ambrosiussen.
+Perforce Plugin for Houdini developed by Ambrosiussen Holding, Licensed and Distributed by Bismuth Consultancy BV.
 
 [![](https://img.shields.io/badge/twitter-%230077B5.svg?style=for-the-badge&logo=twitter)](https://twitter.com/ambrosiussen_p)
 [![](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/paulambrosiussen/)
 
 You can join the Discord to chat about the plugin: https://discord.gg/rKr5SNZJtM
 
-By downloading or using the plugin (or any of its contents), you are agreeing to the EULA and Terms of Service.
+By downloading or using the plugin (or any of its contents), you are agreeing to the LICENSE found in this repository and [Terms of Service of Bismuth Consultancy B.V.](https://www.bismuthconsultancy.com/terms-of-use)
 
 Please note that the plugin is currently in beta, and only supports Houdini 19.0 on Windows and Linux.
 
