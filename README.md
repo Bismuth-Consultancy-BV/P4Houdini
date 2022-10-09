@@ -14,7 +14,7 @@ Please note that the plugin is currently in beta, and only supports Houdini 19.0
 ## Aquiring a License
 If you are an individual and want a node-locked license, you can simply purchase a license on Gumroad here: https://ambrosiussen.gumroad.com/l/p4houdini
 
-If you are a studio and want access on multiple machines, please contact me at paul@ambrosiussen.com
+If you are a studio and want access on multiple machines, please contact me at contact@bismuth.at
 
 ## Important information about Houdini & Perforce!
 Please make sure your hip and hda files that get submitted to perforce are marked as binary files and not text files!!
@@ -94,11 +94,11 @@ The plugin root has a file called `P4Preferences.json`, which contains some sett
 `P4Updates` - This dictionary contains booleans for automatic triggers that will happen when using Houdini. Setting these to false will no longer automatically
 trigger the plugin to issue Perforce commands when for example saving a file. This allows you to for example have a purely manual workflow.
 
-More features are being developed based on user requests. Please send me an email at paul@ambrosiussen.com, or open an issue here on Github.
+More features are being developed based on user requests. Please send me an email at contact@bismuth.at, or open an issue here on Github.
 
 
 ## Troubleshooting
-If you have an issue, either send me an email at paul@ambrosiussen.com, or open an issue here on Github.
+If you have an issue, either send me an email at contact@bismuth.at, or open an issue here on Github.
 
 Linux:
 - If the shelf installer has issues, try installing the `curl` module using for example `sudo apt install curl`. Then restart Houdini and try again.
