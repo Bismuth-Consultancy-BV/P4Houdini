@@ -22,6 +22,19 @@ def P4Prompt(message):
         return True
     return False
 
+def P4ChooseYesNo(message):
+    messagebox = QtWidgets.QMessageBox()
+    messagebox.setIconPixmap(QtGui.QPixmap(hou.text.expandString("$P4HOUDINI/help/icons/perforce-icon.svg")))
+    messagebox.setText(message)
+    messagebox.setWindowTitle(PLUGIN_NAME)
+    messagebox.setStandardButtons(QtWidgets.QMessageBox.Yes | QtWidgets.QMessageBox.No)
+
+    value = messagebox.exec()
+    if value == QtWidgets.QMessageBox.Yes:
+        return True
+    return False
+
+
 def P4Message(message):
     messagebox = QtWidgets.QMessageBox()
     messagebox.setIconPixmap(QtGui.QPixmap(hou.text.expandString("$P4HOUDINI/help/icons/perforce-icon.svg")))
