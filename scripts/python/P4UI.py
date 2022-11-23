@@ -4,6 +4,7 @@ This is UI code only.
 
 import re
 import hou
+import json
 from hutil.Qt import QtCore, QtGui, QtWidgets
 
 
@@ -60,6 +61,25 @@ def natural_keys_2nd_element(text):
     http://nedbatchelder.com/blog/200712/human_sorting.html
     '''
     return [ atoi(c) for c in re.split(r'(\d+)', text[1]) ]
+
+class P4UIUtils():
+
+    @staticmethod
+    def set_depot_root():
+        path = hou.ui.selectFile(title=f"{PLUGIN_NAME} - Select Depot Root", file_type=hou.fileType.Directory, chooser_mode=hou.fileChooserMode.Read)
+        preferences_file = hou.text.expandString("$P4HOUDINI/P4Preferences.json")
+
+        with open(preferences_file, encoding="utf-8") as file:
+            preferences = json.load(file)
+
+        if path != "":
+            preferences["P4Client_Root"] = hou.text.expandString(path)
+
+            with open(preferences_file, 'w') as file:
+                json.dump(preferences, file, indent=4)
+
+        return preferences["P4Client_Root"]
+
 
 class P4HoudiniChangeListChooser(QtWidgets.QDialog):
     """

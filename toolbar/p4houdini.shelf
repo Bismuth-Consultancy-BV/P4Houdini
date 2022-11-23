@@ -78,22 +78,9 @@ hou.ui.displayMessage("You have now installed the required dependencies for this
   </tool>
 
   <tool name="p4houdini_set_depot" label="Set Depot" icon="$P4HOUDINI/help/icons/set_depot.svg">
-    <script scriptType="python"><![CDATA[import hou
-import json
+    <script scriptType="python"><![CDATA[import P4UI
 
-path = hou.ui.selectFile(title="P4Houdini - Select Depot Root", file_type=hou.fileType.Directory, chooser_mode=hou.fileChooserMode.Read)
-
-if path != "":
-    preferences_file = hou.text.expandString("$P4HOUDINI/P4Preferences.json")
-
-    with open(preferences_file, encoding="utf-8") as file:
-        preferences = json.load(file)
-    
-    
-    preferences["P4Client_Root"] = hou.text.expandString(path)
-    
-    with open(preferences_file, 'w') as file:
-        json.dump(preferences, file, indent=4)]]></script>
+P4UI.P4UIUtils.set_depot_root()]]></script>
   </tool>
 
   <tool name="p4houdini_debug" label="Debug Config" icon="$P4HOUDINI/help/icons/help.svg">

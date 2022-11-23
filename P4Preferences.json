@@ -1,6 +1,6 @@
 {
-    "P4_Enabled": true,
-    "P4Client_Root": "D:/Local_P4V_Depot/",
+    "P4_Enabled": false,
+    "P4Client_Root": "C:/Projects/Houdini-Perforce/",
     "P4_AutoConnect": true,
     "P4_License": "$HOUDINI_USER_PREF_DIR/p4houdini.license",
     "P4CL_Default": "Houdini Generated CL",
