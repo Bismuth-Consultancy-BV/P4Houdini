@@ -102,7 +102,7 @@ If you have an issue, either send me an email at contact@bismuth.at, or open an 
 
 Linux:
 - If the shelf installer has issues, try installing the `curl` module using for example `sudo apt install curl`. Then restart Houdini and try again.
-If that fails, manually pip install the `p4python`and `netifaces` modules yourself.
+If that fails, manually pip install the `p4python` module yourself.
 
 
 ## Privacy Statement
