@@ -1,8 +1,0 @@
-{
-    "path": "$P4HOUDINI",
-    "env": [
-        {
-            "P4HOUDINI" :  "C:/AMTA/Own_IP/P4Houdini-Private/"
-        }
-    ]
-}
